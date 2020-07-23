@@ -3,7 +3,9 @@
 DIR='Files'
 homeFiles=$(find $DIR -maxdepth 1 -type f) 
 
-for i in ${homeFiles[@]}; do
-	echo $i
+for file in ${homeFiles[@]}; do
+	bname=$(basename $file)
+	echo $file  $bname
+	#cp -li $file $HOME/$bname
 done
 
