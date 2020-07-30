@@ -8,6 +8,14 @@ group.add_argument('-l', '--load', dest='load', action='store_true')
 group.add_argument('-d', '--dump', dest='dump', action='store_true')
 args = parser.parse_args()
 
+
+class Path(object):
+    def __init__(self, fpath, gpath):
+        assert fpath is not None and gpath is not None
+        self.finalPath = fpath
+        self.gitPath = gpath
+
+
 homeFiles = ['.Xresources',
              '.bashrc',
              '.shrc',
@@ -24,16 +32,13 @@ homeFiles = ['.Xresources',
 files = {}
 
 for i in homeFiles:
-    files[i] = {
-        'source': 'Files/{}'.format(i),
-        'dest': '~/{}'.format(i)
-    }
+    files[i] = Path(fpath="tmp/{}".format(i), gpath='Files/{}'.format(i))
 
 
 def dump():
     for paths in files.values():
         subprocess.run(
-            ["cp -i {} {}". format(paths['source'], paths['dest'])], shell=1)
+            ["cp -i {} {}".format(paths.gitPath, paths.finalPath)], shell=1)
 
 
 def load():
