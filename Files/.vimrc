@@ -5,6 +5,7 @@ set shiftwidth=4
 set autoindent
 set mouse=a
 syntax on
+set nu
 set rnu
 filetype plugin indent on
 inoremap jk <ESC>
@@ -37,5 +38,8 @@ inoremap jk <ESC>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+	"autocompletes
+	Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
 call plug#end()

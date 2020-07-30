@@ -18,4 +18,5 @@ alias drivecopypushalll='rclone copy ~/Documents/driveSync/ remote:linuxSync/ -L
 alias loadxresources='xrdb -merge  ~/.Xresources'
 alias opn='xdg-open'
 alias jnb='jupyter-notebook'
+alias jcolab='jupyter notebook --NotebookApp.allow_origin="https://colab.research.google.com" --no-browser'
 
