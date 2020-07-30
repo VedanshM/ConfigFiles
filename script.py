@@ -32,7 +32,7 @@ homeFiles = ['.Xresources',
 files = {}
 
 for i in homeFiles:
-    files[i] = Path(fpath="tmp/{}".format(i), gpath='Files/{}'.format(i))
+    files[i] = Path(fpath="~/{}".format(i), gpath='Files/{}'.format(i))
 
 
 def dump():
@@ -42,7 +42,9 @@ def dump():
 
 
 def load():
-    pass
+    for paths in files.values():
+        subprocess.run(
+            ["cp {} {}".format(paths.finalPath, paths.gitPath)], shell=1)
 
 
 if args.load:
