@@ -137,3 +137,7 @@ complete -o default -F _pip_completion pip3
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
+# zsh like autocomplete case insensitive
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
