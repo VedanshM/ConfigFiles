@@ -40,6 +40,5 @@ inoremap jk <ESC>
 call plug#begin('~/.vim/plugged')
 	"autocompletes
 	Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-
 call plug#end()
+
