@@ -39,6 +39,16 @@ inoremap jk <ESC>
 
 call plug#begin('~/.vim/plugged')
 	"autocompletes
-	Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+	Plug 'ycm-core/YouCompleteMe'
+	Plug 'jiangmiao/auto-pairs'
+
+	"color schemes
+
 call plug#end()
+
+
+"for ycm
+let g:clang_library_path='/usr/lib/x86_64-linux-gnu/libclang-10.so.1'
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
