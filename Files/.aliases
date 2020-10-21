@@ -20,3 +20,6 @@ alias opn='xdg-open'
 alias jnb='jupyter-notebook'
 alias jcolab='jupyter notebook --NotebookApp.allow_origin="https://colab.research.google.com" --no-browser'
 
+# temporary uses
+alias sqlstart='mysql -h 127.0.0.1 -P 5005 -u root -p '
+

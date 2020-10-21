@@ -96,7 +96,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting virtualenv colored-man-pages)
+plugins=(git zsh-syntax-highlighting virtualenv colored-man-pages docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 ####################################
@@ -123,3 +123,4 @@ function _pip_completion {
 compctl -K _pip_completion pip3
 compctl -K _pip_completion pip
 # pip zsh completion end
+source /etc/zsh_command_not_found
