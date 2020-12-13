@@ -135,3 +135,8 @@ prompt_end() {
   echo -n "\n%{%F{$CURRENT_BG}%}➜%{%f%}"
   CURRENT_BG=''
 }
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)

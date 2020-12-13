@@ -141,3 +141,7 @@ complete -o default -F _pip_completion pip
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
+
+# >>>> Vagrant command completion (start)
+. /opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
