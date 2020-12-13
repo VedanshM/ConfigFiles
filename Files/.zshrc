@@ -124,3 +124,14 @@ compctl -K _pip_completion pip3
 compctl -K _pip_completion pip
 # pip zsh completion end
 source /etc/zsh_command_not_found
+
+# to have prompt on the next line
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+  echo -n "\n%{%F{$CURRENT_BG}%}➜%{%f%}"
+  CURRENT_BG=''
+}
