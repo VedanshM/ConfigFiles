@@ -41,7 +41,7 @@ call plug#begin('~/.vim/plugged')
 	"autocompletes
 	Plug 'ycm-core/YouCompleteMe'
 	Plug 'jiangmiao/auto-pairs'
-
+	Plug 'tweekmonster/startuptime.vim'
 	"color schemes
 
 call plug#end()
