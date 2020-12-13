@@ -5,3 +5,5 @@
 [user]
 	name = Vedansh Mittal
 	email = 56213441+VedanshM@users.noreply.github.com
+[alias]
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
