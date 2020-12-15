@@ -101,6 +101,7 @@ plugins=(git zsh-syntax-highlighting virtualenv colored-man-pages docker docker-
 source $ZSH/oh-my-zsh.sh
 ####################################
 # my changes 
+
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
@@ -109,23 +110,10 @@ setopt EXTENDED_HISTORY
 HISTORY_IGNORE="(l|l *|l|ls|ls *|cd|cd *|pwd|exit|xx|cc|hh|subl|subl *|code|code *|history|hist)"
 test -f ~/.shrc && source ~/.shrc
 
-
-
-# pip zsh completion start
-function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-}
-compctl -K _pip_completion pip3
-compctl -K _pip_completion pip
-# pip zsh completion end
+#for not-installed commands
 source /etc/zsh_command_not_found
 
-# to have prompt on the next line
+#to have prompt on the next line
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
     echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
@@ -136,7 +124,21 @@ prompt_end() {
   CURRENT_BG=''
 }
 
-# >>>> Vagrant command completion (start)
+####### COMPLETIONS ##########
+#pip
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip3
+compctl -K _pip_completion pip
+
+#vagrant
 fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
+
 compinit
-# <<<<  Vagrant command completion (end)
+##############################
