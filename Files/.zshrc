@@ -145,6 +145,8 @@ prompt_end() {
 ####### COMPLETIONS ##########
 export HISTORY_SUBSTRING_SEARCH_FUZZY="true"
 
+#restic
+source ~/.restic_complete
 
 #pip
 function _pip_completion {

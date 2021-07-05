@@ -26,7 +26,8 @@ homeFiles = ['.Xresources',
              '.aliases',
              '.profile',
              '.xinitrc',
-             '.xinputrc'
+             '.xinputrc',
+             '.restic_complete',
              ]
 
 
