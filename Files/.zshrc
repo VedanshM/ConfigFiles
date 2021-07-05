@@ -104,7 +104,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting virtualenv colored-man-pages docker docker-compose)
+plugins=(
+        git
+        zsh-syntax-highlighting
+        virtualenv
+        colored-man-pages
+        docker
+        docker-compose
+        aws
+        conda-zsh-completion
+        history-substring-search
+        )
 
 source $ZSH/oh-my-zsh.sh
 ####################################
@@ -133,6 +143,9 @@ prompt_end() {
 }
 
 ####### COMPLETIONS ##########
+export HISTORY_SUBSTRING_SEARCH_FUZZY="true"
+
+
 #pip
 function _pip_completion {
   local words cword
