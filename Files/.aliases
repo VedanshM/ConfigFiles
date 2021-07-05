@@ -21,6 +21,10 @@ alias jnb='jupyter-notebook'
 alias jcolab='jupyter notebook --NotebookApp.allow_origin="https://colab.research.google.com" --no-browser'
 alias py='python3'
 alias dstat='dstat -cmsdn'
+alias mountphone='sshfs phone:/sdcard/. ~/mount'
+alias battery='cat /sys/class/power_supply/BAT1/capacity'
+alias resetSwap='sudo swapoff -a && sudo swapon -a '
+
 
 # temporary uses
 alias sqlstart='mysql -h 127.0.0.1 -P 5005 -u root -p '
