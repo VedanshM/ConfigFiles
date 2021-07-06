@@ -40,7 +40,7 @@ for i in homeFiles:
 def dump():
     for paths in files.values():
         subprocess.run(
-            ["cp -i {} {}".format(paths.gitPath, paths.finalPath)], shell=1)
+            ["cp {} {}".format(paths.gitPath, paths.finalPath)], shell=1)
 
 
 def load():
