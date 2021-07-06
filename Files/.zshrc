@@ -129,7 +129,7 @@ HISTORY_IGNORE="(l|l *|l|ls|ls *|cd|cd *|pwd|exit|xx|cc|hh|subl|subl *|code|code
 test -f ~/.shrc && source ~/.shrc
 
 #for not-installed commands
-source /etc/zsh_command_not_found
+source /data/data/com.termux/files/etc/zsh_command_not_found
 
 #to have prompt on the next line
 prompt_end() {
