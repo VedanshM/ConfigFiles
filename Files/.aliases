@@ -23,7 +23,8 @@ alias py='python3'
 alias dstat='dstat -cmsdn'
 alias mountphone='sshfs phone:/sdcard/. ~/mount'
 alias battery='cat /sys/class/power_supply/BAT1/capacity'
-alias resetSwap='sudo swapoff -a && sudo swapon -a '
+alias resetSwap='sudo sh -c "swapoff -a &&  swapon -a"'
+alias andscr='scrcpy -w --max-fps 33 --disable-screensaver -S'
 
 
 # temporary uses
